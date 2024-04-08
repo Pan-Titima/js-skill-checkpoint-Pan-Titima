@@ -6,3 +6,13 @@ const inventory = {
 };
 
 // เริ่มเขียนโค้ดตรงนี้
+inventory.apple.quantity = 200;
+const orangeValue = { price: 20, quantity: 300 };
+inventory.orange = orangeValue;
+console.log(inventory);
+let totalAmount = 0;
+for(let key in inventory){
+  totalAmount += inventory[key].price * inventory[key].quantity;
+}
+console.log(`Total inventory value: ${totalAmount} baht`);
+
